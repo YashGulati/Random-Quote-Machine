@@ -1,0 +1,54 @@
+html, body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  background: #a9a9a9;
+  margin: 0px;
+  text-align: center;
+  transition: all 1s ease-in-out; }
+
+.box {
+  margin-top: 175px;
+  display: inline-block;
+  width: 550px;
+  min-height: 220px;
+  background: #fff;
+  padding: 40px 50px; }
+  .box h1 {
+    font-size: 30px;
+    transition: all 2s ease-in-out; }
+  .box #author {
+    font-size: 18px;
+    float: right; }
+  .box .btns {
+    width: 100%;
+    margin-top: 50px; }
+    .box .btns button {
+      border-radius: 5%; }
+    .box .btns button:focus {
+      outline: none; }
+    .box .btns .twitter {
+      float: left;
+      width: 40px;
+      border: 0;
+      color: white;
+      font-size: 1.5em;
+      padding: 10px;
+      position: relative; }
+    .box .btns .next {
+      float: right;
+      width: 110px;
+      border: 0;
+      color: white;
+      padding: 10px 0px;
+      position: relative; }
+    .box .btns a:hover {
+      text-decoration: none; }
+
+p {
+  color: white;
+  font-size: 1.2em;
+  margin-top: 20px; }
+
+/*# sourceMappingURL=style.css.map */
