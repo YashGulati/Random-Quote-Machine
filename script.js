@@ -1,7 +1,8 @@
 r_text =[];
 r_color =[];
 myURL = ""
-
+var i;
+var j;
 // all the quotes listed
 var textObj = [
   {
@@ -56,17 +57,20 @@ var colorArr = [
 "#FB6964",
 ];
 
-  function next() {
+function randomize(){
+  var prevI = i;
+  i = Math.random();
+  i = textObj.length * i;
+  i = Math.floor(i);
+  var prevJ = j;
+  j = Math.random();
+  j = colorArr.length * j;
+  j = Math.floor(j);
+  if(prevI == i || prevJ == j) randomize();
+}
 
-//random number generator
-var i = Math.random();
-i = textObj.length * i;
-i = Math.floor(i);
-//again
-var j = Math.random();
-j = colorArr.length * j;
-j = Math.floor(j);
-
+function next() {
+randomize();
 //getting quote and color variable
 quote = textObj[i].quote;
 author = textObj[i].author;
@@ -90,5 +94,5 @@ myURL = "https://twitter.com/intent/tweet?hashtags=yashgulati&related=yashgulati
 function tweet() {
   var win = window.open(myURL, '_blank');
   if(win) win.focus();
-    else alert('Please allow popups for this site');
+  else alert('Please allow popups for this site');
 }
